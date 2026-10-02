@@ -1,3 +1,11 @@
+# Large Dataset Archives & Binary Files
+*.zip
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+*.bin
+
 # Python
 __pycache__/
 *.py[cod]
