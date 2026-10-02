@@ -1,0 +1,7 @@
+dataset,source_url,license,commercial_use,academic_use,redistribution,attribution_required,access_restriction,license_status
+Kaggle Oral Diseases,https://www.kaggle.com/datasets/salmansajid05/oral-diseases,CC BY-NC-SA 4.0,NO,YES,YES,YES,OPEN,LICENSE_VERIFIED
+MIO My Intraoral Images,https://zenodo.org/records/22047269,CC BY 4.0,YES,YES,YES,YES,OPEN,LICENSE_VERIFIED
+Aga Khan Caries Dataset,https://zenodo.org/records/14827784,CC BY-NC 4.0,NO,YES,YES,YES,OPEN,LICENSE_VERIFIED
+DENTEX 2023 Challenge,https://dentex.grand-challenge.org/data/,CC BY-NC-SA 4.0,NO,YES,YES,YES,OPEN,LICENSE_VERIFIED
+OralSDv1,https://github.com/enderXM249/OralSDv1,LICENSE_UNKNOWN,UNKNOWN,REQUIRES_REVIEW,UNKNOWN,YES,OPEN,LICENSE_REVIEW_REQUIRED
+SMART Intraoral Mucosal Images,https://zenodo.org/,RESTRICTED,NO,REQUIRES_APPROVAL,NO,YES,RESTRICTED,LICENSE_RESTRICTED

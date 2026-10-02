@@ -1,0 +1,3 @@
+image_id_a,image_id_b,phash_a,phash_b,hamming_distance,review_status,notes
+RAW_IMG_00025,RAW_IMG_00001,93b36e4c68b193c6,93b16c4e6cb193c6,4,REVIEW_REQUIRED,Borderline perceptual similarity.
+RAW_IMG_00091,RAW_IMG_00083,86a67a5959e68659,86a77b5958a68659,4,REVIEW_REQUIRED,Borderline perceptual similarity.

@@ -1,0 +1,17 @@
+target_class,total_images,modalities
+Healthy_Tooth,11,INTRAORAL_PHOTO
+Caries_Cavity,62,"DENTAL_RADIOGRAPH, INTRAORAL_PHOTO"
+Dental_Plaque,14,INTRAORAL_PHOTO
+Calculus_Tartar,24,INTRAORAL_PHOTO
+Gingivitis,35,INTRAORAL_PHOTO
+Tooth_Discoloration,24,INTRAORAL_PHOTO
+Tooth_Abrasion,14,INTRAORAL_PHOTO
+Tooth_Crack_Fracture,14,INTRAORAL_PHOTO
+Dental_Filling,14,INTRAORAL_PHOTO
+Dental_Crown,14,INTRAORAL_PHOTO
+Missing_Tooth,38,INTRAORAL_PHOTO
+Impacted_Tooth,14,DENTAL_RADIOGRAPH
+Malaligned_Crowded,14,INTRAORAL_PHOTO
+Gum_Recession,14,INTRAORAL_PHOTO
+Gum_Swelling,25,INTRAORAL_PHOTO
+Mouth_Ulcer,24,INTRAORAL_PHOTO

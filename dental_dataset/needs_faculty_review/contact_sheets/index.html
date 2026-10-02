@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DentAI - Dental Faculty Review Queue Contact Sheet</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f172a; color: #f8fafc; margin: 0; padding: 20px; }
+        h1 { color: #38bdf8; font-size: 24px; margin-bottom: 8px; }
+        p.subtitle { color: #94a3b8; font-size: 14px; margin-bottom: 24px; }
+        .grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+        .card { background: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 12px; font-size: 11px; display: flex; flex-direction: column; gap: 6px; }
+        .card img { width: 100%; height: 160px; object-fit: cover; border-radius: 4px; background: #000; }
+        .badge { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: bold; }
+        .badge-close { background: #f59e0b; color: #000; }
+        .badge-not-eq { background: #ef4444; color: #fff; }
+        .badge-review { background: #3b82f6; color: #fff; }
+        .question { background: rgba(56, 189, 248, 0.1); border-left: 3px solid #38bdf8; padding: 6px; color: #e2e8f0; border-radius: 0 4px 4px 0; }
+        .btn-group { display: flex; gap: 4px; margin-top: 6px; }
+        .btn-group button { flex: 1; padding: 4px; font-size: 10px; font-weight: bold; border: none; border-radius: 4px; cursor: pointer; }
+        .btn-approve { background: #10b981; color: #fff; }
+        .btn-reject { background: #ef4444; color: #fff; }
+    </style>
+</head>
+<body>
+    <h1>🦷 Dental Faculty Review Queue — Contact Sheet</h1>
+    <p class="subtitle">Inspect proposed target class mappings, quality flags, and clinical review questions below.</p>
+    <div class="grid">
+
+        <div class="card">
+            <img src="..\..\raw\kaggle_oral_diseases\Calculus\PATIENT_K02_03_img7_Calculus.png" alt="RAW_IMG_00061">
+            <div><strong>ID:</strong> RAW_IMG_00061</div>
+            <div><strong>Source:</strong> kaggle_oral_diseases</div>
+            <div><strong>Original Label:</strong> <code>Calculus</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Calculus_Tartar</span></div>
+            <div><span class="badge badge-review">EXACT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Calculus' clinically representative of 'Calculus_Tartar'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\kaggle_oral_diseases\Caries\PATIENT_K01_03_img7_Caries.png" alt="RAW_IMG_00076">
+            <div><strong>ID:</strong> RAW_IMG_00076</div>
+            <div><strong>Source:</strong> kaggle_oral_diseases</div>
+            <div><strong>Original Label:</strong> <code>Caries</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Caries_Cavity</span></div>
+            <div><span class="badge badge-review">EXACT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Caries' clinically representative of 'Caries_Cavity'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\kaggle_oral_diseases\Gingivitis\PATIENT_K03_03_img7_Gingivitis.png" alt="RAW_IMG_00091">
+            <div><strong>ID:</strong> RAW_IMG_00091</div>
+            <div><strong>Source:</strong> kaggle_oral_diseases</div>
+            <div><strong>Original Label:</strong> <code>Gingivitis</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Gingivitis</span></div>
+            <div><span class="badge badge-review">EXACT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Gingivitis' clinically representative of 'Gingivitis'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\kaggle_oral_diseases\Hypodontia\PATIENT_K05_01_img10_Hypodontia.png" alt="RAW_IMG_00098">
+            <div><strong>ID:</strong> RAW_IMG_00098</div>
+            <div><strong>Source:</strong> kaggle_oral_diseases</div>
+            <div><strong>Original Label:</strong> <code>Hypodontia</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Missing_Tooth</span></div>
+            <div><span class="badge badge-not-eq">NOT_EQUIVALENT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Hypodontia' clinically representative of 'Missing_Tooth'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\kaggle_oral_diseases\Hypodontia\PATIENT_K05_01_img15_Hypodontia.png" alt="RAW_IMG_00099">
+            <div><strong>ID:</strong> RAW_IMG_00099</div>
+            <div><strong>Source:</strong> kaggle_oral_diseases</div>
+            <div><strong>Original Label:</strong> <code>Hypodontia</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Missing_Tooth</span></div>
+            <div><span class="badge badge-not-eq">NOT_EQUIVALENT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Hypodontia' clinically representative of 'Missing_Tooth'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\kaggle_oral_diseases\Hypodontia\PATIENT_K05_01_img5_Hypodontia.png" alt="RAW_IMG_00100">
+            <div><strong>ID:</strong> RAW_IMG_00100</div>
+            <div><strong>Source:</strong> kaggle_oral_diseases</div>
+            <div><strong>Original Label:</strong> <code>Hypodontia</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Missing_Tooth</span></div>
+            <div><span class="badge badge-not-eq">NOT_EQUIVALENT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Hypodontia' clinically representative of 'Missing_Tooth'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\kaggle_oral_diseases\Hypodontia\PATIENT_K05_02_img11_Hypodontia.png" alt="RAW_IMG_00101">
+            <div><strong>ID:</strong> RAW_IMG_00101</div>
+            <div><strong>Source:</strong> kaggle_oral_diseases</div>
+            <div><strong>Original Label:</strong> <code>Hypodontia</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Missing_Tooth</span></div>
+            <div><span class="badge badge-not-eq">NOT_EQUIVALENT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Hypodontia' clinically representative of 'Missing_Tooth'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\kaggle_oral_diseases\Hypodontia\PATIENT_K05_02_img1_Hypodontia.png" alt="RAW_IMG_00102">
+            <div><strong>ID:</strong> RAW_IMG_00102</div>
+            <div><strong>Source:</strong> kaggle_oral_diseases</div>
+            <div><strong>Original Label:</strong> <code>Hypodontia</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Missing_Tooth</span></div>
+            <div><span class="badge badge-not-eq">NOT_EQUIVALENT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Hypodontia' clinically representative of 'Missing_Tooth'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\kaggle_oral_diseases\Hypodontia\PATIENT_K05_02_img6_Hypodontia.png" alt="RAW_IMG_00103">
+            <div><strong>ID:</strong> RAW_IMG_00103</div>
+            <div><strong>Source:</strong> kaggle_oral_diseases</div>
+            <div><strong>Original Label:</strong> <code>Hypodontia</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Missing_Tooth</span></div>
+            <div><span class="badge badge-not-eq">NOT_EQUIVALENT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Hypodontia' clinically representative of 'Missing_Tooth'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\kaggle_oral_diseases\Hypodontia\PATIENT_K05_03_img12_Hypodontia.png" alt="RAW_IMG_00104">
+            <div><strong>ID:</strong> RAW_IMG_00104</div>
+            <div><strong>Source:</strong> kaggle_oral_diseases</div>
+            <div><strong>Original Label:</strong> <code>Hypodontia</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Missing_Tooth</span></div>
+            <div><span class="badge badge-not-eq">NOT_EQUIVALENT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Hypodontia' clinically representative of 'Missing_Tooth'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\kaggle_oral_diseases\Hypodontia\PATIENT_K05_03_img2_Hypodontia.png" alt="RAW_IMG_00105">
+            <div><strong>ID:</strong> RAW_IMG_00105</div>
+            <div><strong>Source:</strong> kaggle_oral_diseases</div>
+            <div><strong>Original Label:</strong> <code>Hypodontia</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Missing_Tooth</span></div>
+            <div><span class="badge badge-not-eq">NOT_EQUIVALENT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Hypodontia' clinically representative of 'Missing_Tooth'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\kaggle_oral_diseases\Hypodontia\PATIENT_K05_03_img7_Hypodontia.png" alt="RAW_IMG_00106">
+            <div><strong>ID:</strong> RAW_IMG_00106</div>
+            <div><strong>Source:</strong> kaggle_oral_diseases</div>
+            <div><strong>Original Label:</strong> <code>Hypodontia</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Missing_Tooth</span></div>
+            <div><span class="badge badge-not-eq">NOT_EQUIVALENT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Hypodontia' clinically representative of 'Missing_Tooth'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\kaggle_oral_diseases\Hypodontia\PATIENT_K05_04_img13_Hypodontia.png" alt="RAW_IMG_00107">
+            <div><strong>ID:</strong> RAW_IMG_00107</div>
+            <div><strong>Source:</strong> kaggle_oral_diseases</div>
+            <div><strong>Original Label:</strong> <code>Hypodontia</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Missing_Tooth</span></div>
+            <div><span class="badge badge-not-eq">NOT_EQUIVALENT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Hypodontia' clinically representative of 'Missing_Tooth'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\kaggle_oral_diseases\Hypodontia\PATIENT_K05_04_img3_Hypodontia.png" alt="RAW_IMG_00108">
+            <div><strong>ID:</strong> RAW_IMG_00108</div>
+            <div><strong>Source:</strong> kaggle_oral_diseases</div>
+            <div><strong>Original Label:</strong> <code>Hypodontia</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Missing_Tooth</span></div>
+            <div><span class="badge badge-not-eq">NOT_EQUIVALENT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Hypodontia' clinically representative of 'Missing_Tooth'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\kaggle_oral_diseases\Hypodontia\PATIENT_K05_04_img8_Hypodontia.png" alt="RAW_IMG_00109">
+            <div><strong>ID:</strong> RAW_IMG_00109</div>
+            <div><strong>Source:</strong> kaggle_oral_diseases</div>
+            <div><strong>Original Label:</strong> <code>Hypodontia</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Missing_Tooth</span></div>
+            <div><span class="badge badge-not-eq">NOT_EQUIVALENT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Hypodontia' clinically representative of 'Missing_Tooth'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\kaggle_oral_diseases\Hypodontia\PATIENT_K05_05_img14_Hypodontia.png" alt="RAW_IMG_00110">
+            <div><strong>ID:</strong> RAW_IMG_00110</div>
+            <div><strong>Source:</strong> kaggle_oral_diseases</div>
+            <div><strong>Original Label:</strong> <code>Hypodontia</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Missing_Tooth</span></div>
+            <div><span class="badge badge-not-eq">NOT_EQUIVALENT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Hypodontia' clinically representative of 'Missing_Tooth'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\kaggle_oral_diseases\Hypodontia\PATIENT_K05_05_img4_Hypodontia.png" alt="RAW_IMG_00111">
+            <div><strong>ID:</strong> RAW_IMG_00111</div>
+            <div><strong>Source:</strong> kaggle_oral_diseases</div>
+            <div><strong>Original Label:</strong> <code>Hypodontia</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Missing_Tooth</span></div>
+            <div><span class="badge badge-not-eq">NOT_EQUIVALENT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Hypodontia' clinically representative of 'Missing_Tooth'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\kaggle_oral_diseases\Hypodontia\PATIENT_K05_05_img9_Hypodontia.png" alt="RAW_IMG_00112">
+            <div><strong>ID:</strong> RAW_IMG_00112</div>
+            <div><strong>Source:</strong> kaggle_oral_diseases</div>
+            <div><strong>Original Label:</strong> <code>Hypodontia</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Missing_Tooth</span></div>
+            <div><span class="badge badge-not-eq">NOT_EQUIVALENT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Hypodontia' clinically representative of 'Missing_Tooth'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\kaggle_oral_diseases\Mouth_Ulcer\PATIENT_K06_03_img7_Mouth_Ulcer.png" alt="RAW_IMG_00121">
+            <div><strong>ID:</strong> RAW_IMG_00121</div>
+            <div><strong>Source:</strong> kaggle_oral_diseases</div>
+            <div><strong>Original Label:</strong> <code>Mouth_Ulcer</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Mouth_Ulcer</span></div>
+            <div><span class="badge badge-review">EXACT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Mouth_Ulcer' clinically representative of 'Mouth_Ulcer'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\kaggle_oral_diseases\Tooth_Discoloration\PATIENT_K04_03_img7_Tooth_Discoloration.png" alt="RAW_IMG_00136">
+            <div><strong>ID:</strong> RAW_IMG_00136</div>
+            <div><strong>Source:</strong> kaggle_oral_diseases</div>
+            <div><strong>Original Label:</strong> <code>Tooth_Discoloration</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Tooth_Discoloration</span></div>
+            <div><span class="badge badge-review">EXACT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Tooth_Discoloration' clinically representative of 'Tooth_Discoloration'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\mio\Healthy_gingiva\PATIENT_MIO_01_01_img4_Healthy_gingiva.png" alt="RAW_IMG_00154">
+            <div><strong>ID:</strong> RAW_IMG_00154</div>
+            <div><strong>Source:</strong> mio</div>
+            <div><strong>Original Label:</strong> <code>Healthy_gingiva</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Healthy_Tooth</span></div>
+            <div><span class="badge badge-close">CLOSE</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Healthy_gingiva' clinically representative of 'Healthy_Tooth'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\mio\Healthy_gingiva\PATIENT_MIO_01_01_img8_Healthy_gingiva.png" alt="RAW_IMG_00155">
+            <div><strong>ID:</strong> RAW_IMG_00155</div>
+            <div><strong>Source:</strong> mio</div>
+            <div><strong>Original Label:</strong> <code>Healthy_gingiva</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Healthy_Tooth</span></div>
+            <div><span class="badge badge-close">CLOSE</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Healthy_gingiva' clinically representative of 'Healthy_Tooth'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\mio\Healthy_gingiva\PATIENT_MIO_01_02_img1_Healthy_gingiva.png" alt="RAW_IMG_00156">
+            <div><strong>ID:</strong> RAW_IMG_00156</div>
+            <div><strong>Source:</strong> mio</div>
+            <div><strong>Original Label:</strong> <code>Healthy_gingiva</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Healthy_Tooth</span></div>
+            <div><span class="badge badge-close">CLOSE</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Healthy_gingiva' clinically representative of 'Healthy_Tooth'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\mio\Healthy_gingiva\PATIENT_MIO_01_02_img5_Healthy_gingiva.png" alt="RAW_IMG_00157">
+            <div><strong>ID:</strong> RAW_IMG_00157</div>
+            <div><strong>Source:</strong> mio</div>
+            <div><strong>Original Label:</strong> <code>Healthy_gingiva</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Healthy_Tooth</span></div>
+            <div><span class="badge badge-close">CLOSE</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Healthy_gingiva' clinically representative of 'Healthy_Tooth'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\mio\Healthy_gingiva\PATIENT_MIO_01_02_img9_Healthy_gingiva.png" alt="RAW_IMG_00158">
+            <div><strong>ID:</strong> RAW_IMG_00158</div>
+            <div><strong>Source:</strong> mio</div>
+            <div><strong>Original Label:</strong> <code>Healthy_gingiva</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Healthy_Tooth</span></div>
+            <div><span class="badge badge-close">CLOSE</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Healthy_gingiva' clinically representative of 'Healthy_Tooth'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\mio\Healthy_gingiva\PATIENT_MIO_01_03_img10_Healthy_gingiva.png" alt="RAW_IMG_00159">
+            <div><strong>ID:</strong> RAW_IMG_00159</div>
+            <div><strong>Source:</strong> mio</div>
+            <div><strong>Original Label:</strong> <code>Healthy_gingiva</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Healthy_Tooth</span></div>
+            <div><span class="badge badge-close">CLOSE</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Healthy_gingiva' clinically representative of 'Healthy_Tooth'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\mio\Healthy_gingiva\PATIENT_MIO_01_03_img2_Healthy_gingiva.png" alt="RAW_IMG_00160">
+            <div><strong>ID:</strong> RAW_IMG_00160</div>
+            <div><strong>Source:</strong> mio</div>
+            <div><strong>Original Label:</strong> <code>Healthy_gingiva</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Healthy_Tooth</span></div>
+            <div><span class="badge badge-close">CLOSE</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Healthy_gingiva' clinically representative of 'Healthy_Tooth'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\mio\Healthy_gingiva\PATIENT_MIO_01_03_img6_Healthy_gingiva.png" alt="RAW_IMG_00161">
+            <div><strong>ID:</strong> RAW_IMG_00161</div>
+            <div><strong>Source:</strong> mio</div>
+            <div><strong>Original Label:</strong> <code>Healthy_gingiva</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Healthy_Tooth</span></div>
+            <div><span class="badge badge-close">CLOSE</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Healthy_gingiva' clinically representative of 'Healthy_Tooth'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\mio\Healthy_gingiva\PATIENT_MIO_01_04_img11_Healthy_gingiva.png" alt="RAW_IMG_00162">
+            <div><strong>ID:</strong> RAW_IMG_00162</div>
+            <div><strong>Source:</strong> mio</div>
+            <div><strong>Original Label:</strong> <code>Healthy_gingiva</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Healthy_Tooth</span></div>
+            <div><span class="badge badge-close">CLOSE</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Healthy_gingiva' clinically representative of 'Healthy_Tooth'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\mio\Healthy_gingiva\PATIENT_MIO_01_04_img3_Healthy_gingiva.png" alt="RAW_IMG_00163">
+            <div><strong>ID:</strong> RAW_IMG_00163</div>
+            <div><strong>Source:</strong> mio</div>
+            <div><strong>Original Label:</strong> <code>Healthy_gingiva</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Healthy_Tooth</span></div>
+            <div><span class="badge badge-close">CLOSE</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Healthy_gingiva' clinically representative of 'Healthy_Tooth'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\mio\Healthy_gingiva\PATIENT_MIO_01_04_img7_Healthy_gingiva.png" alt="RAW_IMG_00164">
+            <div><strong>ID:</strong> RAW_IMG_00164</div>
+            <div><strong>Source:</strong> mio</div>
+            <div><strong>Original Label:</strong> <code>Healthy_gingiva</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Healthy_Tooth</span></div>
+            <div><span class="badge badge-close">CLOSE</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Healthy_gingiva' clinically representative of 'Healthy_Tooth'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\mio\Periodontitis\PATIENT_MIO_03_01_img4_Periodontitis.png" alt="RAW_IMG_00165">
+            <div><strong>ID:</strong> RAW_IMG_00165</div>
+            <div><strong>Source:</strong> mio</div>
+            <div><strong>Original Label:</strong> <code>Periodontitis</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Gum_Swelling</span></div>
+            <div><span class="badge badge-close">CLOSE</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Periodontitis' clinically representative of 'Gum_Swelling'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\mio\Periodontitis\PATIENT_MIO_03_01_img8_Periodontitis.png" alt="RAW_IMG_00166">
+            <div><strong>ID:</strong> RAW_IMG_00166</div>
+            <div><strong>Source:</strong> mio</div>
+            <div><strong>Original Label:</strong> <code>Periodontitis</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Gum_Swelling</span></div>
+            <div><span class="badge badge-close">CLOSE</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Periodontitis' clinically representative of 'Gum_Swelling'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\mio\Periodontitis\PATIENT_MIO_03_02_img1_Periodontitis.png" alt="RAW_IMG_00167">
+            <div><strong>ID:</strong> RAW_IMG_00167</div>
+            <div><strong>Source:</strong> mio</div>
+            <div><strong>Original Label:</strong> <code>Periodontitis</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Gum_Swelling</span></div>
+            <div><span class="badge badge-close">CLOSE</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Periodontitis' clinically representative of 'Gum_Swelling'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\mio\Periodontitis\PATIENT_MIO_03_02_img5_Periodontitis.png" alt="RAW_IMG_00168">
+            <div><strong>ID:</strong> RAW_IMG_00168</div>
+            <div><strong>Source:</strong> mio</div>
+            <div><strong>Original Label:</strong> <code>Periodontitis</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Gum_Swelling</span></div>
+            <div><span class="badge badge-close">CLOSE</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Periodontitis' clinically representative of 'Gum_Swelling'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\mio\Periodontitis\PATIENT_MIO_03_02_img9_Periodontitis.png" alt="RAW_IMG_00169">
+            <div><strong>ID:</strong> RAW_IMG_00169</div>
+            <div><strong>Source:</strong> mio</div>
+            <div><strong>Original Label:</strong> <code>Periodontitis</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Gum_Swelling</span></div>
+            <div><span class="badge badge-close">CLOSE</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Periodontitis' clinically representative of 'Gum_Swelling'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\mio\Periodontitis\PATIENT_MIO_03_03_img10_Periodontitis.png" alt="RAW_IMG_00170">
+            <div><strong>ID:</strong> RAW_IMG_00170</div>
+            <div><strong>Source:</strong> mio</div>
+            <div><strong>Original Label:</strong> <code>Periodontitis</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Gum_Swelling</span></div>
+            <div><span class="badge badge-close">CLOSE</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Periodontitis' clinically representative of 'Gum_Swelling'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\mio\Periodontitis\PATIENT_MIO_03_03_img2_Periodontitis.png" alt="RAW_IMG_00171">
+            <div><strong>ID:</strong> RAW_IMG_00171</div>
+            <div><strong>Source:</strong> mio</div>
+            <div><strong>Original Label:</strong> <code>Periodontitis</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Gum_Swelling</span></div>
+            <div><span class="badge badge-close">CLOSE</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Periodontitis' clinically representative of 'Gum_Swelling'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\mio\Periodontitis\PATIENT_MIO_03_03_img6_Periodontitis.png" alt="RAW_IMG_00172">
+            <div><strong>ID:</strong> RAW_IMG_00172</div>
+            <div><strong>Source:</strong> mio</div>
+            <div><strong>Original Label:</strong> <code>Periodontitis</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Gum_Swelling</span></div>
+            <div><span class="badge badge-close">CLOSE</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Periodontitis' clinically representative of 'Gum_Swelling'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\mio\Periodontitis\PATIENT_MIO_03_04_img11_Periodontitis.png" alt="RAW_IMG_00173">
+            <div><strong>ID:</strong> RAW_IMG_00173</div>
+            <div><strong>Source:</strong> mio</div>
+            <div><strong>Original Label:</strong> <code>Periodontitis</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Gum_Swelling</span></div>
+            <div><span class="badge badge-close">CLOSE</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Periodontitis' clinically representative of 'Gum_Swelling'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\mio\Periodontitis\PATIENT_MIO_03_04_img3_Periodontitis.png" alt="RAW_IMG_00174">
+            <div><strong>ID:</strong> RAW_IMG_00174</div>
+            <div><strong>Source:</strong> mio</div>
+            <div><strong>Original Label:</strong> <code>Periodontitis</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Gum_Swelling</span></div>
+            <div><span class="badge badge-close">CLOSE</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Periodontitis' clinically representative of 'Gum_Swelling'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\mio\Periodontitis\PATIENT_MIO_03_04_img7_Periodontitis.png" alt="RAW_IMG_00175">
+            <div><strong>ID:</strong> RAW_IMG_00175</div>
+            <div><strong>Source:</strong> mio</div>
+            <div><strong>Original Label:</strong> <code>Periodontitis</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Gum_Swelling</span></div>
+            <div><span class="badge badge-close">CLOSE</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Periodontitis' clinically representative of 'Gum_Swelling'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\oralsdv1\Hypodontia\oralsd_PATIENT_K05_01_img5_Hypodontia.png" alt="RAW_IMG_00203">
+            <div><strong>ID:</strong> RAW_IMG_00203</div>
+            <div><strong>Source:</strong> oralsdv1</div>
+            <div><strong>Original Label:</strong> <code>Hypodontia</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Missing_Tooth</span></div>
+            <div><span class="badge badge-not-eq">NOT_EQUIVALENT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Hypodontia' clinically representative of 'Missing_Tooth'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\oralsdv1\Hypodontia\oralsd_PATIENT_K05_02_img1_Hypodontia.png" alt="RAW_IMG_00204">
+            <div><strong>ID:</strong> RAW_IMG_00204</div>
+            <div><strong>Source:</strong> oralsdv1</div>
+            <div><strong>Original Label:</strong> <code>Hypodontia</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Missing_Tooth</span></div>
+            <div><span class="badge badge-not-eq">NOT_EQUIVALENT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Hypodontia' clinically representative of 'Missing_Tooth'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\oralsdv1\Hypodontia\oralsd_PATIENT_K05_02_img6_Hypodontia.png" alt="RAW_IMG_00205">
+            <div><strong>ID:</strong> RAW_IMG_00205</div>
+            <div><strong>Source:</strong> oralsdv1</div>
+            <div><strong>Original Label:</strong> <code>Hypodontia</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Missing_Tooth</span></div>
+            <div><span class="badge badge-not-eq">NOT_EQUIVALENT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Hypodontia' clinically representative of 'Missing_Tooth'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\oralsdv1\Hypodontia\oralsd_PATIENT_K05_03_img2_Hypodontia.png" alt="RAW_IMG_00206">
+            <div><strong>ID:</strong> RAW_IMG_00206</div>
+            <div><strong>Source:</strong> oralsdv1</div>
+            <div><strong>Original Label:</strong> <code>Hypodontia</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Missing_Tooth</span></div>
+            <div><span class="badge badge-not-eq">NOT_EQUIVALENT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Hypodontia' clinically representative of 'Missing_Tooth'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\oralsdv1\Hypodontia\oralsd_PATIENT_K05_03_img7_Hypodontia.png" alt="RAW_IMG_00207">
+            <div><strong>ID:</strong> RAW_IMG_00207</div>
+            <div><strong>Source:</strong> oralsdv1</div>
+            <div><strong>Original Label:</strong> <code>Hypodontia</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Missing_Tooth</span></div>
+            <div><span class="badge badge-not-eq">NOT_EQUIVALENT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Hypodontia' clinically representative of 'Missing_Tooth'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\oralsdv1\Hypodontia\oralsd_PATIENT_K05_04_img3_Hypodontia.png" alt="RAW_IMG_00208">
+            <div><strong>ID:</strong> RAW_IMG_00208</div>
+            <div><strong>Source:</strong> oralsdv1</div>
+            <div><strong>Original Label:</strong> <code>Hypodontia</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Missing_Tooth</span></div>
+            <div><span class="badge badge-not-eq">NOT_EQUIVALENT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Hypodontia' clinically representative of 'Missing_Tooth'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\oralsdv1\Hypodontia\oralsd_PATIENT_K05_04_img8_Hypodontia.png" alt="RAW_IMG_00209">
+            <div><strong>ID:</strong> RAW_IMG_00209</div>
+            <div><strong>Source:</strong> oralsdv1</div>
+            <div><strong>Original Label:</strong> <code>Hypodontia</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Missing_Tooth</span></div>
+            <div><span class="badge badge-not-eq">NOT_EQUIVALENT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Hypodontia' clinically representative of 'Missing_Tooth'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\oralsdv1\Hypodontia\oralsd_PATIENT_K05_05_img4_Hypodontia.png" alt="RAW_IMG_00210">
+            <div><strong>ID:</strong> RAW_IMG_00210</div>
+            <div><strong>Source:</strong> oralsdv1</div>
+            <div><strong>Original Label:</strong> <code>Hypodontia</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Missing_Tooth</span></div>
+            <div><span class="badge badge-not-eq">NOT_EQUIVALENT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Hypodontia' clinically representative of 'Missing_Tooth'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\oralsdv1\Hypodontia\oralsd_PATIENT_K05_05_img9_Hypodontia.png" alt="RAW_IMG_00211">
+            <div><strong>ID:</strong> RAW_IMG_00211</div>
+            <div><strong>Source:</strong> oralsdv1</div>
+            <div><strong>Original Label:</strong> <code>Hypodontia</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Missing_Tooth</span></div>
+            <div><span class="badge badge-not-eq">NOT_EQUIVALENT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Hypodontia' clinically representative of 'Missing_Tooth'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\other_sources\Dental_Crown\PATIENT_ADD_05_05_img9_Dental_Crown.png" alt="RAW_IMG_00243">
+            <div><strong>ID:</strong> RAW_IMG_00243</div>
+            <div><strong>Source:</strong> other_sources</div>
+            <div><strong>Original Label:</strong> <code>Dental_Crown</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Dental_Crown</span></div>
+            <div><span class="badge badge-review">EXACT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Dental_Crown' clinically representative of 'Dental_Crown'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\other_sources\Dental_Filling\PATIENT_ADD_04_05_img9_Dental_Filling.png" alt="RAW_IMG_00257">
+            <div><strong>ID:</strong> RAW_IMG_00257</div>
+            <div><strong>Source:</strong> other_sources</div>
+            <div><strong>Original Label:</strong> <code>Dental_Filling</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Dental_Filling</span></div>
+            <div><span class="badge badge-review">EXACT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Dental_Filling' clinically representative of 'Dental_Filling'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\other_sources\Dental_Plaque\PATIENT_ADD_01_05_img9_Dental_Plaque.png" alt="RAW_IMG_00271">
+            <div><strong>ID:</strong> RAW_IMG_00271</div>
+            <div><strong>Source:</strong> other_sources</div>
+            <div><strong>Original Label:</strong> <code>Dental_Plaque</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Dental_Plaque</span></div>
+            <div><span class="badge badge-review">EXACT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Dental_Plaque' clinically representative of 'Dental_Plaque'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\other_sources\Gum_Recession\PATIENT_ADD_08_05_img9_Gum_Recession.png" alt="RAW_IMG_00285">
+            <div><strong>ID:</strong> RAW_IMG_00285</div>
+            <div><strong>Source:</strong> other_sources</div>
+            <div><strong>Original Label:</strong> <code>Gum_Recession</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Gum_Recession</span></div>
+            <div><span class="badge badge-review">EXACT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Gum_Recession' clinically representative of 'Gum_Recession'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\other_sources\Gum_Swelling\PATIENT_ADD_09_05_img9_Gum_Swelling.png" alt="RAW_IMG_00299">
+            <div><strong>ID:</strong> RAW_IMG_00299</div>
+            <div><strong>Source:</strong> other_sources</div>
+            <div><strong>Original Label:</strong> <code>Gum_Swelling</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Gum_Swelling</span></div>
+            <div><span class="badge badge-review">EXACT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Gum_Swelling' clinically representative of 'Gum_Swelling'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\other_sources\Malaligned_Crowded\PATIENT_ADD_07_05_img9_Malaligned_Crowded.png" alt="RAW_IMG_00313">
+            <div><strong>ID:</strong> RAW_IMG_00313</div>
+            <div><strong>Source:</strong> other_sources</div>
+            <div><strong>Original Label:</strong> <code>Malaligned_Crowded</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Malaligned_Crowded</span></div>
+            <div><span class="badge badge-review">EXACT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Malaligned_Crowded' clinically representative of 'Malaligned_Crowded'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\other_sources\Missing_Tooth\PATIENT_ADD_06_05_img9_Missing_Tooth.png" alt="RAW_IMG_00327">
+            <div><strong>ID:</strong> RAW_IMG_00327</div>
+            <div><strong>Source:</strong> other_sources</div>
+            <div><strong>Original Label:</strong> <code>Missing_Tooth</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Missing_Tooth</span></div>
+            <div><span class="badge badge-review">EXACT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Missing_Tooth' clinically representative of 'Missing_Tooth'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\other_sources\Tooth_Abrasion\PATIENT_ADD_02_05_img9_Tooth_Abrasion.png" alt="RAW_IMG_00341">
+            <div><strong>ID:</strong> RAW_IMG_00341</div>
+            <div><strong>Source:</strong> other_sources</div>
+            <div><strong>Original Label:</strong> <code>Tooth_Abrasion</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Tooth_Abrasion</span></div>
+            <div><span class="badge badge-review">EXACT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Tooth_Abrasion' clinically representative of 'Tooth_Abrasion'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="..\..\raw\other_sources\Tooth_Crack_Fracture\PATIENT_ADD_03_05_img9_Tooth_Crack_Fracture.png" alt="RAW_IMG_00355">
+            <div><strong>ID:</strong> RAW_IMG_00355</div>
+            <div><strong>Source:</strong> other_sources</div>
+            <div><strong>Original Label:</strong> <code>Tooth_Crack_Fracture</code></div>
+            <div><strong>Proposed Class:</strong> <span style="color:#34d399;font-weight:bold;">Tooth_Crack_Fracture</span></div>
+            <div><span class="badge badge-review">EXACT</span> <span class="badge badge-review">INTRAORAL_PHOTO</span></div>
+            <div class="question">❓ Is this image of 'Tooth_Crack_Fracture' clinically representative of 'Tooth_Crack_Fracture'?</div>
+            <div class="btn-group">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

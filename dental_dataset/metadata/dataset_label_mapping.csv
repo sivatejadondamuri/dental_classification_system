@@ -1,0 +1,28 @@
+source_dataset,source_label,target_class,mapping_type,confidence,requires_faculty_validation,reason
+caries_zenodo,Caries,Caries_Cavity,EXACT,HIGH,NO,Direct pathological match for dental caries.
+dentex,Caries_Radiograph,Caries_Cavity,EXACT,HIGH,NO,Direct pathological match for dental caries.
+dentex,Impacted_Tooth,Impacted_Tooth,EXACT,HIGH,NO,Direct match for impacted molar radiograph.
+kaggle_oral_diseases,Calculus,Calculus_Tartar,EXACT,HIGH,NO,Direct clinical match for dental calculus deposit.
+kaggle_oral_diseases,Caries,Caries_Cavity,EXACT,HIGH,NO,Direct pathological match for dental caries.
+kaggle_oral_diseases,Gingivitis,Gingivitis,EXACT,HIGH,NO,Direct match for gingival inflammation.
+kaggle_oral_diseases,Hypodontia,Missing_Tooth,NOT_EQUIVALENT,HIGH,YES,Hypodontia is congenital absence; Missing_Tooth includes extraction/trauma. Requires faculty review.
+kaggle_oral_diseases,Mouth_Ulcer,Mouth_Ulcer,EXACT,HIGH,NO,Direct match for oral mucosal ulcer.
+kaggle_oral_diseases,Tooth_Discoloration,Tooth_Discoloration,EXACT,HIGH,NO,Direct match for tooth stain/discoloration.
+mio,Gingivitis,Gingivitis,EXACT,HIGH,NO,Direct match for gingival inflammation.
+mio,Healthy_gingiva,Healthy_Tooth,CLOSE,MEDIUM,YES,Healthy gingiva does not prove crown/tooth structural health. Requires faculty review.
+mio,Periodontitis,Gum_Swelling,CLOSE,MEDIUM,YES,Periodontitis involves bone loss & attachment loss. Requires faculty review.
+oralsdv1,Calculus,Calculus_Tartar,EXACT,HIGH,NO,Direct clinical match for dental calculus deposit.
+oralsdv1,Caries,Caries_Cavity,EXACT,HIGH,NO,Direct pathological match for dental caries.
+oralsdv1,Gingivitis,Gingivitis,EXACT,HIGH,NO,Direct match for gingival inflammation.
+oralsdv1,Hypodontia,Missing_Tooth,NOT_EQUIVALENT,HIGH,YES,Hypodontia is congenital absence; Missing_Tooth includes extraction/trauma. Requires faculty review.
+oralsdv1,Mouth_Ulcer,Mouth_Ulcer,EXACT,HIGH,NO,Direct match for oral mucosal ulcer.
+oralsdv1,Tooth_Discoloration,Tooth_Discoloration,EXACT,HIGH,NO,Direct match for tooth stain/discoloration.
+other_sources,Dental_Crown,Dental_Crown,EXACT,HIGH,NO,Direct match for prosthetic crown.
+other_sources,Dental_Filling,Dental_Filling,EXACT,HIGH,NO,Direct match for composite/amalgam restoration.
+other_sources,Dental_Plaque,Dental_Plaque,EXACT,HIGH,NO,Direct match for dental plaque biofilm.
+other_sources,Gum_Recession,Gum_Recession,EXACT,HIGH,NO,Direct match for gingival recession.
+other_sources,Gum_Swelling,Gum_Swelling,EXACT,HIGH,NO,Direct match for gingival edema.
+other_sources,Malaligned_Crowded,Malaligned_Crowded,EXACT,HIGH,NO,Direct match for crowding.
+other_sources,Missing_Tooth,Missing_Tooth,EXACT,HIGH,NO,Direct match for tooth absence.
+other_sources,Tooth_Abrasion,Tooth_Abrasion,EXACT,HIGH,NO,Direct match for cervical abrasion.
+other_sources,Tooth_Crack_Fracture,Tooth_Crack_Fracture,EXACT,HIGH,NO,Direct match for fracture line.

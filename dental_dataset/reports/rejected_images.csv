@@ -1,0 +1,2 @@
+image_id,source_dataset,source_path,reason,automated_check,timestamp
+RAW_IMG_00080,kaggle_oral_diseases,D:\dental_classification_system\dental_dataset\raw\kaggle_oral_diseases\Caries\PATIENT_K01_05_img14_Caries.png,Corrupted or invalid image format: cannot identify image file 'D:\\dental_classification_system\\dental_dataset\\raw\\kaggle_oral_diseases\\Caries\\PATIENT_K01_05_img14_Caries.png',PIL/NumPy Quality Triage,2026-10-02

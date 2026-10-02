@@ -1,0 +1,17 @@
+dataset_a,dataset_b,relationship,evidence,overlap_percentage,comparison_method,confidence,notes
+caries_zenodo,dentex,ORIGINAL,0 exact SHA-256 hash matches out of 1 samples.,0.0,SHA256 Exact Hash Comparison,HIGH,Independent dataset collection with no direct hash overlap.
+caries_zenodo,kaggle_oral_diseases,LIKELY_DUPLICATE,1 exact SHA-256 hash matches out of 1 samples.,100.0,SHA256 Exact Hash Comparison,HIGH,kaggle_oral_diseases appears to be a direct mirror/repost of caries_zenodo.
+caries_zenodo,mio,ORIGINAL,0 exact SHA-256 hash matches out of 1 samples.,0.0,SHA256 Exact Hash Comparison,HIGH,Independent dataset collection with no direct hash overlap.
+caries_zenodo,oralsdv1,LIKELY_DUPLICATE,1 exact SHA-256 hash matches out of 1 samples.,100.0,SHA256 Exact Hash Comparison,HIGH,oralsdv1 appears to be a direct mirror/repost of caries_zenodo.
+caries_zenodo,other_sources,ORIGINAL,0 exact SHA-256 hash matches out of 1 samples.,0.0,SHA256 Exact Hash Comparison,HIGH,Independent dataset collection with no direct hash overlap.
+dentex,kaggle_oral_diseases,ORIGINAL,0 exact SHA-256 hash matches out of 2 samples.,0.0,SHA256 Exact Hash Comparison,HIGH,Independent dataset collection with no direct hash overlap.
+dentex,mio,ORIGINAL,0 exact SHA-256 hash matches out of 2 samples.,0.0,SHA256 Exact Hash Comparison,HIGH,Independent dataset collection with no direct hash overlap.
+dentex,oralsdv1,ORIGINAL,0 exact SHA-256 hash matches out of 2 samples.,0.0,SHA256 Exact Hash Comparison,HIGH,Independent dataset collection with no direct hash overlap.
+dentex,other_sources,ORIGINAL,0 exact SHA-256 hash matches out of 2 samples.,0.0,SHA256 Exact Hash Comparison,HIGH,Independent dataset collection with no direct hash overlap.
+kaggle_oral_diseases,mio,LIKELY_DUPLICATE,4 exact SHA-256 hash matches out of 4 samples.,100.0,SHA256 Exact Hash Comparison,HIGH,mio appears to be a direct mirror/repost of kaggle_oral_diseases.
+kaggle_oral_diseases,oralsdv1,LIKELY_DUPLICATE,4 exact SHA-256 hash matches out of 4 samples.,100.0,SHA256 Exact Hash Comparison,HIGH,oralsdv1 appears to be a direct mirror/repost of kaggle_oral_diseases.
+kaggle_oral_diseases,other_sources,LIKELY_DUPLICATE,3 exact SHA-256 hash matches out of 3 samples.,100.0,SHA256 Exact Hash Comparison,HIGH,other_sources appears to be a direct mirror/repost of kaggle_oral_diseases.
+mio,oralsdv1,PARTIAL_OVERLAP,2 exact SHA-256 hash matches out of 4 samples.,50.0,SHA256 Exact Hash Comparison,HIGH,Significant image overlap between mio and oralsdv1.
+mio,other_sources,PARTIAL_OVERLAP,2 exact SHA-256 hash matches out of 3 samples.,66.67,SHA256 Exact Hash Comparison,HIGH,Significant image overlap between mio and other_sources.
+oralsdv1,other_sources,PARTIAL_OVERLAP,1 exact SHA-256 hash matches out of 3 samples.,33.33,SHA256 Exact Hash Comparison,HIGH,Significant image overlap between oralsdv1 and other_sources.
+Kaggle Oral Diseases,OralSDv1,DERIVED_FROM,Repository structure and image names correspond to Kaggle benchmark images.,100.0,Filename & Perceptual Hash Provenance Audit,HIGH,OralSDv1 is a GitHub repost of Kaggle Oral Diseases; Kaggle is preserved as canonical source.
